@@ -21,7 +21,7 @@ nuevo_organismo = {
 nuevo_organismo_df = pd.DataFrame([nuevo_organismo])
 nuevo_organismo_encoded = pd.get_dummies(nuevo_organismo_df)
 
-# Asegúrate de que tenga las mismas columnas que X_test
+# Verificar de que tenga las mismas columnas que X_test
 nuevo_organismo_encoded = nuevo_organismo_encoded.reindex(columns=X_test.columns, fill_value=0)
 
 # Convierte a float32
